@@ -10,7 +10,7 @@ const blogRouter = new Hono<{
     JWT_SECRET: string;
   };
 }>();
-
+console.log('test');
 blogRouter.use("/*", async (c, next) => {
   const jwtMiddleware = jwt({
     secret: c.env.JWT_SECRET,
